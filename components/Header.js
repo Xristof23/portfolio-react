@@ -8,7 +8,11 @@ import styled from "styled-components";
 const NavButtonContainer = styled(ButtonContainer)`
   margin-top: 0.7rem;`;
 
-const CRHeader = styled.h1` 
+const HeaderContainer = styled(FlexRowWrapper)`
+margin-top: 0.5rem;
+`;
+
+const CRLogo = styled.h1` 
   color: darkorange;
   top: -1.8rem;
   font-size: 2.5rem;
@@ -20,15 +24,14 @@ const CRHeader = styled.h1`
 export default function Header({whatIsShown, setWhatIsShown}) {
   
   return (
-    <FlexRowWrapper>
-      <CRHeader>CR</CRHeader>
+    <HeaderContainer>
+      <CRLogo>CR</CRLogo>
       <NavButtonContainer>
         <Button isActive={whatIsShown === "news" ? true : false} text="news" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}/>
         <Button isActive={whatIsShown === "projects" ? true : false} text="projects" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />
         <Button isActive={whatIsShown === "about" ? true : false} text="about" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}/>
         <Button isActive={whatIsShown === "me" ? true : false} text="me" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />
       </NavButtonContainer>
- 
-    </FlexRowWrapper>
+    </HeaderContainer>
   );
 }

@@ -1,7 +1,9 @@
-import { Headline1, StandardParagraph } from "@/sharedStyledComponents";
 import styled from "styled-components"
 import ProjectList from "./ProjectList";
-import { projectList } from "@/contentData";
+import { aboutContent, meContent, projectList, newsList } from "@/contentData";
+import Article from "./Article";
+import Contact from "./Contact";
+
 
 const StyledMain = styled.main`
     color: #fcfffc;
@@ -10,15 +12,14 @@ const StyledMain = styled.main`
     `;
 
 export default function MainContainer({ whatIsShown }) {
-  console.log("whatisshown(Maincontainer): ", whatIsShown)
+  
     return (
         <StyledMain>
-         <Headline1>{whatIsShown === "projects"? "Projects" : "About this"}</Headline1>
-            {whatIsShown === "about" && <StandardParagraph>
-                This portfolio ....
-            </StandardParagraph>}
+            {whatIsShown === "news" && <ProjectList list={newsList} />}
             {whatIsShown === "projects" && <ProjectList list={projectList} />}
-  
+            {whatIsShown === "about" && <Article content={aboutContent} />}
+            {whatIsShown === "me" && <Article content={meContent} />}
+            {whatIsShown === "me" && <Contact />}
         </StyledMain>
     );
 }

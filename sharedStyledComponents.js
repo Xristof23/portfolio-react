@@ -27,8 +27,12 @@ width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
 background-color: ${({ $color }) => $color? $color : "#fcfffc"};
 min-width: fit-content;
 height: 2rem;
-border-radius: 4px;
+border-radius: 6px;
 border: none;
+ &:hover {
+    background-color:rgb(252, 188, 69);
+    cursor: pointer; 
+  }
 `;
 
 
@@ -39,17 +43,22 @@ font-size: 1rem;
 width: 88%;
 margin: .4rem;
 padding: .4rem;
-
 `;
+
+const StandardArticle = styled.article`
+    background-color: #222222;
+    border-radius: 8px;
+    padding: 0.25rem;
+    margin: 0.5rem 0.25rem;
+    `;
 
 const Headline1 = styled.h1` 
 color: #fffffc;
 font-size: 1.3rem;
 font-weight: 600; 
-margin: 1.2rem .4rem .4rem;
+margin: .4rem .4rem .4rem;
 padding: .4rem;
 `;
-
 
 const Headline2 = styled.h2`
 color: #fffffc;
@@ -77,7 +86,6 @@ const FlexColumnWrapper = styled.div`
     width: 100%;
 `;
 
-
 //Form
 const StandardLabel = styled.label`
 color: #fffffc;
@@ -93,7 +101,7 @@ const StyledNrInput = styled.input`
   width: 4rem;
   margin: .4rem;
   padding: .4rem;
-  border-radius: 4px;
+  border-radius: 6px;
 `;
 
 const StyledInput = styled.input`
@@ -104,7 +112,7 @@ const StyledInput = styled.input`
   margin: .2rem 0 .2rem .2rem;
   padding: 0
   border: 1px solid darkorange;
-
+  border-radius: 6px;
 `;
 
 export {
@@ -116,7 +124,8 @@ export {
     StyledInput,
     StyledNrInput,
     StandardLabel,
-  StandardButton,
+    StandardArticle,
+    StandardButton,
     StandardLink,
     StandardParagraph
   }

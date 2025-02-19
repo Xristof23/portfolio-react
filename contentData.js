@@ -34,7 +34,7 @@ const squarrel = {
   title: "SQUARREL",
   shortDescription: "A little memory game with some options",
   description:
-    "A memory game with diffferent card sets, timer, and two player (hot seat) mode. Did this alone, no KI used for coding, only for the images.",
+    "A memory game with diffferent card sets, timer and two player (hot seat) mode. Did this alone, no KI used for coding, only for the images.",
   url: "https://squarrel.vercel.app/",
 };
 
@@ -50,7 +50,15 @@ const projectList = [whatAFeeling, squarrel];
 
 const newsList = [news250116, news250115];
 
-export { newsList, whatAFeeling, squarrel, squarrelDe, projectList };
+const aboutContent = { headline: "About this portfolio", paragraph1: "This project uses React, next.js and styled components.", paragraph2: "No KI was used in the making of this project." }
+
+const meContent = {
+  headline: "About me", paragraph1: "born and raised in Hassia, living in the Rheinland now studied math, social sciences and more",
+  paragraph2: "worked as math teacher, journalist and other jobs learned web development @Neue Fische in 2024",
+  paragraph3:  "tech stack: html, css, javascript, react, next.js ..."
+}
+
+export {aboutContent, meContent, newsList, whatAFeeling, squarrel, squarrelDe, projectList };
 
 //Ideas
 
