@@ -9,7 +9,7 @@ const FooterStyled = styled.footer`
 
     min-width: 350px;
     max-width: 700px;
-    margin: 2rem .5rem .5rem;
+    margin: 2rem 1rem .5rem;
     padding: .25rem;
     border: 1px solid darkorange;
     border-radius: 4px;

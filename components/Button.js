@@ -4,14 +4,16 @@ import {
 import { useState } from "react";
 
 
-export default function Button({ text }) {
-  const [isActive, setIsActive] = useState(false);
+export default function Button({ isActive, text, whatIsShown, setWhatIsShown }) {
+  // const [isActive, setIsActive] = useState(false);
+  console.log("whatIsShown button ", whatIsShown);
     function handleButton() {
-        console.log(text);
-      setIsActive(!isActive);
-    }
+      console.log(text);
+      setWhatIsShown(text)
+  }
+  
     return(
-    <StandardButton onClick={handleButton} $color={isActive? "darkorange" : "#fcfffc"}>
+      <StandardButton onClick={handleButton} $color={isActive? "darkorange" : "#fcfffc"}>
    {text}
   </StandardButton>
  )

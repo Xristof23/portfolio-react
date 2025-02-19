@@ -16,11 +16,11 @@ const ButtonContainer = styled.div`
 `;
 
 const StandardButton = styled.button`
+color: black;
 text-align: center;
 font-size: 1.1rem;
 line-height: 1.1rem;
 font-weight: 500; 
-flex-grow: 1;
 margin: .3rem;
 padding: 0.3rem;
 width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
@@ -29,7 +29,6 @@ min-width: fit-content;
 height: 2rem;
 border-radius: 4px;
 border: none;
-// background-color: #fcfffc;
 `;
 
 
@@ -54,7 +53,7 @@ padding: .4rem;
 
 const Headline2 = styled.h2`
 color: #fffffc;
-font-size: 1.05rem;
+font-size: 1.2rem;
 font-weight: 600; 
 margin: .4rem;
 padding: .4rem;
@@ -62,7 +61,6 @@ padding: .4rem;
 
 const StandardLink = styled(Link)`
 margin: 0.5rem;
-color: var(--primary);
 text-decoration: none;
 `;
 

@@ -10,23 +10,23 @@ const NavButtonContainer = styled(ButtonContainer)`
 
 const CRHeader = styled.h1` 
   color: darkorange;
-  top: -2rem;
+  top: -1.8rem;
   font-size: 2.5rem;
-  font-weight: 800; 
-  margin: 0rem .4rem .4rem;
+  font-weight: 700; 
+  margin: 0rem 0.8rem .4rem;
   padding: .2rem;
 `;
 
-export default function Header() {
+export default function Header({whatIsShown, setWhatIsShown}) {
   
   return (
     <FlexRowWrapper>
       <CRHeader>CR</CRHeader>
       <NavButtonContainer>
-        <Button text="news"/>
-        <Button text="projects" />
-        <Button text="about" />
-        <Button text="me"/>
+        <Button isActive={whatIsShown === "news" ? true : false} text="news" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}/>
+        <Button isActive={whatIsShown === "projects" ? true : false} text="projects" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />
+        <Button isActive={whatIsShown === "about" ? true : false} text="about" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}/>
+        <Button isActive={whatIsShown === "me" ? true : false} text="me" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />
       </NavButtonContainer>
  
     </FlexRowWrapper>
