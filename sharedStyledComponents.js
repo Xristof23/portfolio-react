@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 //Buttons
@@ -22,18 +23,19 @@ font-weight: 500;
 flex-grow: 1;
 margin: .3rem;
 padding: 0.3rem;
-width: ${({ $width }) => $width? `${$width}px` : "5rem"};
+width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
+background-color: ${({ $color }) => $color? $color : "#fcfffc"};
 min-width: fit-content;
 height: 2rem;
 border-radius: 4px;
 border: none;
-background-color: #fcfffc;
+// background-color: #fcfffc;
 `;
 
 
 //Basic
 const StandardParagraph = styled.p`
-color: #fffffc;
+color: #fcfffc;
 font-size: 1rem;
 width: 88%;
 margin: .4rem;
@@ -58,6 +60,11 @@ margin: .4rem;
 padding: .4rem;
 `;
 
+const StandardLink = styled(Link)`
+margin: 0.5rem;
+color: var(--primary);
+text-decoration: none;
+`;
 
 //Basic-wrapper
 const FlexRowWrapper = styled.div`
@@ -111,6 +118,7 @@ export {
     StyledInput,
     StyledNrInput,
     StandardLabel,
-    StandardButton,
+  StandardButton,
+    StandardLink,
     StandardParagraph
   }

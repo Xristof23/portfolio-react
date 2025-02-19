@@ -1,4 +1,4 @@
-import { StandardParagraph } from "@/sharedStyledComponents";
+import { StandardParagraph, StandardLink } from "@/sharedStyledComponents";
 import Button from "./Button";
 
 export default function ProjectCard({ project }) {
@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
              <StandardParagraph>${shortDescription}</StandardParagraph>
         <Button text="show details"/>
         
-        
-        {/* <a class="content_link" href=${url} title="Check this out" >visit ${title} website</a> */}
+        <StandardLink href={url} title="Check this out" >visit {title} website</StandardLink>
+        {/* <a class="content_link" href=${url}  >visit ${title} website</a> */}
         </article>)
 } 

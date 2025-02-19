@@ -6,11 +6,11 @@ const FooterStyled = styled.footer`
     font-weight: 400; 
     color: #fffffc;
     position: absolute; 
-    left: .5rem; 
+
     min-width: 350px;
     max-width: 700px;
-    margin: 2rem .4rem .4rem;
-    padding: .4rem;
+    margin: 2rem .5rem .5rem;
+    padding: .25rem;
     border: 1px solid darkorange;
     border-radius: 4px;
 `;

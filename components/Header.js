@@ -1,7 +1,6 @@
 import {
   ButtonContainer,
   FlexRowWrapper,
-  Headline1
 } from "@/sharedStyledComponents";
 import Button from "./Button";
 import styled from "styled-components";
