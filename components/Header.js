@@ -22,15 +22,15 @@ const CRLogo = styled.h1`
 `;
 
 export default function Header({whatIsShown, setWhatIsShown}) {
-  
+
   return (
     <HeaderContainer>
       <CRLogo>CR</CRLogo>
       <NavButtonContainer>
-        <Button isActive={whatIsShown === "news" ? true : false} text="news" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}/>
-        <Button isActive={whatIsShown === "projects" ? true : false} text="projects" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />
-        <Button isActive={whatIsShown === "about" ? true : false} text="about" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}/>
-        <Button isActive={whatIsShown === "me" ? true : false} text="me" whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "news" ? true : false} text="news"  buttonFunction={setWhatIsShown} />
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "projects" ? true : false} text="projects" buttonFunction={setWhatIsShown}/>
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "about" ? true : false} text="about"  buttonFunction={setWhatIsShown}/>
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "me" ? true : false} text="me" buttonFunction={setWhatIsShown} />
       </NavButtonContainer>
     </HeaderContainer>
   );

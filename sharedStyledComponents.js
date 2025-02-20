@@ -5,6 +5,7 @@ import styled from "styled-components";
 const ButtonContainer = styled.div`
   display: flex;
   gap: 0.4rem;
+  margin: 0.5rem;
   flex-direction: row;
   min-height: fit-content;
   position: relative; 

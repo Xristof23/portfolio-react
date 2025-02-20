@@ -3,14 +3,13 @@ import {
   } from "@/sharedStyledComponents";
 
 
-export default function Button({ isActive, text, whatIsShown, setWhatIsShown }) {
-  
-    function handleButton() {
-      setWhatIsShown(text)
-  }
-  
+export default function Button({ isActive, activeColor, text, buttonFunction, argument, toggle}) {
+  function handleButton() {
+    const finalArgument = toggle? argument : text;
+    buttonFunction(finalArgument);
+}
     return(
-      <StandardButton onClick={handleButton} $color={isActive? "darkorange" : "#fcfffc"}>
+      <StandardButton onClick={handleButton} $color={isActive? activeColor : "#fcfffc"}>
    {text}
   </StandardButton>
  )

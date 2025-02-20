@@ -1,15 +1,14 @@
 import { Headline1, StandardArticle, StandardParagraph } from "@/sharedStyledComponents"
+import Button from "./Button";
 
 
 
 export default function Article({ content }) {
-    const { headline, paragraph1, paragraph2, paragraph3 } = content;
+    const { headline, paragraphList, buttonText } = content;
     return (
         <StandardArticle>
             <Headline1>{headline}</Headline1>
-            <StandardParagraph>{paragraph1}</StandardParagraph>
-            {paragraph2 && <StandardParagraph>{paragraph2}</StandardParagraph>}
-            {paragraph3 && <StandardParagraph>{paragraph3}</StandardParagraph>}
+            {paragraphList.map((entry)=><StandardParagraph key={entry}>{entry}</StandardParagraph>)}
         </StandardArticle>
     )
 }

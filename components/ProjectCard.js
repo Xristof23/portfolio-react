@@ -14,7 +14,11 @@ width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
 background-color: ${({ $color }) => $color? $color : "#fcfffc"};
 min-width: fit-content;
 height: 2rem;
-border-radius: 4px;
+border-radius: 6px;
+ &:hover {
+    background-color:rgb(252, 188, 69);
+    cursor: pointer; 
+  }
 `;
 
 export default function ProjectCard({ project }) {
