@@ -20,7 +20,7 @@ export default function Contact() {
                     <StandardLabel htmlFor="e-mail">E-Mail</StandardLabel>
                     <StyledInput id="e-mail" name="e-mail" />
                     <br />
-                    <StandardButton type="submit" onClick={() => console.log("pressed submit")}>
+                    <StandardButton type="submit">
                         submit
                     </StandardButton>
                 </form> */}
