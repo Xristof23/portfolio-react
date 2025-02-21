@@ -1,10 +1,7 @@
 import { Headline1, StandardArticle, StandardParagraph } from "@/sharedStyledComponents"
-import Button from "./Button";
-
-
 
 export default function Article({ content }) {
-    const { headline, paragraphList, buttonText } = content;
+    const { headline, paragraphList } = content;
     return (
         <StandardArticle>
             <Headline1>{headline}</Headline1>

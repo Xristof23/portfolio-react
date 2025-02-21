@@ -5,7 +5,8 @@ export default function ProjectList({ list }) {
         <>
         {list.map((entry) => 
             <ProjectCard key={entry.title} project={entry} />
-          )}
+            )
+          }
         </>
     )
 }

@@ -15,7 +15,7 @@ export default function MainContainer({ whatIsShown }) {
   
     return (
         <StyledMain>
-            {whatIsShown === "news" && <ProjectList list={newsList} />}
+            {whatIsShown === "news" && <ProjectList newsMode list={newsList} />}
             {whatIsShown === "projects" && <ProjectList list={projectList} />}
             {whatIsShown === "about" && <Article content={aboutContent} />}
             {whatIsShown === "me" && <Article content={meContent} />}

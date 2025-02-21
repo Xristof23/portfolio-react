@@ -24,9 +24,13 @@ const news250420 = {
 const whatAFeeling = {
   title: "What a Feeling",
   shortDescription:
-    "An emotion tracker including login and a lot of options and possibilities. Group effort.",
+    "An emotion tracker including gaphic analysis, login and a lot of options and possibilities. Group effort.",
   description:
-    "What a feeling is a web app which helps you track your emotions... Jana, Jan, Sonja and me created that. We used a scrum like agile aproach. It was ...",
+    "What a feeling is a web app which helps you track your emotions. It was the final project of our team at Neue Fische Web Development Bootcamp. Jana, Jan, Sonja and me created that. ",
+  description2:
+    "We used a scrum like agile aproach and githubs project board to organize the work. After abot have of the planned time, we had our mvp and continued to develop extra features.",
+  featureList: ["document your emotion", "graphic analysis", "login with google", "backend", "..."],
+  techStackList: ["html", "css", "React", "next.js", "plotly"],
   url: "https://what-a-feeling.vercel.app/",
 };
 
@@ -34,7 +38,7 @@ const squarrel = {
   title: "SQUARREL",
   shortDescription: "A little memory game with some options. Worked alone on this one.",
   description:
-    "A memory game with different card sets, timer and two player (hot seat) mode. Did this alone, no KI used for coding, only for the images.",
+    "A memory game with different card sets, timer, highscore and two player (hot seat) mode. Did this alone, no KI used for coding, only for the images.",
   url: "https://squarrel.vercel.app/",
   year: 2024
 };
