@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Header whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown} />    
-      <MainContainer whatIsShown={whatIsShown}>
+      <MainContainer whatIsShown={whatIsShown} setWhatIsShown={setWhatIsShown}>
       </MainContainer>
       <Footer setWhatIsShown={setWhatIsShown} />
     </>

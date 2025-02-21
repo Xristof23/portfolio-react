@@ -11,7 +11,7 @@ const StyledMain = styled.main`
     padding: 0.25rem;
     `;
 
-export default function MainContainer({ whatIsShown }) {
+export default function MainContainer({ whatIsShown, setWhatIsShown }) {
   
     return (
         <StyledMain>
@@ -20,7 +20,7 @@ export default function MainContainer({ whatIsShown }) {
             {whatIsShown === "about" && <Article content={aboutContent} />}
             {whatIsShown === "me" && <Article content={meContent} />}
             {whatIsShown === "me" && <Contact />}
-            {whatIsShown === "avalanche" && <Article content={avalanche} />}
+            {whatIsShown === "avalanche" && <Article content={avalanche} setWhatIsShown={setWhatIsShown}/>}
         </StyledMain>
     );
 }

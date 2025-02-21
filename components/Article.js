@@ -7,7 +7,7 @@ export default function Article({ content, setWhatIsShown }) {
         <StandardArticle>
             <Headline1>{headline}</Headline1>
             {paragraphList.map((entry)=><StandardParagraph key={entry}>{entry}</StandardParagraph>)}
-            {buttonText === "click" && <Button text={buttonText} buttonFunction={setWhatIsShown} parameter="me" />}
+            {buttonText === "click" && <Button text={buttonText} buttonFunction={setWhatIsShown} argument="me" toggle />}
         </StandardArticle>
     )
 }

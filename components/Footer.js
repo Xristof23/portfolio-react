@@ -15,13 +15,21 @@ bottom: -3rem;
     z-index: 3;
     border-radius: 6px;
      &:hover {
-    color:rgb(252, 188, 69);
-    
+    color:rgb(252, 188, 69);   
   }
+`;
+
+const VersionNr = styled.span`
+color: #fcfffc;
+font-size: 0.8rem;
+// border: 1px solid red;
+z-index: 2;
 `;
 
 export default function Footer({setWhatIsShown}) {
     return (
-        <FooterStyled onClick={() => setWhatIsShown("avalanche")}>© 2025 Avalanche & Landslide </FooterStyled>
+        <FooterStyled onClick={() => setWhatIsShown("avalanche")}>
+           © 2025 Avalanche & Landslide <VersionNr>(v0.004 alpha)</VersionNr>
+        </FooterStyled>
     )
 }

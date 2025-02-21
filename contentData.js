@@ -69,7 +69,7 @@ const aboutContent = { headline: "About this portfolio", paragraphList: ["This p
 
 const meContent = {
   headline: "About me", paragraphList: ["- born and raised in Hassia", "- living in the Rheinland now", "- studied math, social sciences and more",
-  "- native German speaker, fluent in English", "- worked as math teacher, journalist and stage hand", "- learned web development @Neue Fische in 2024",
+  "- native German speaker, fluent in English", "- worked as math teacher, journalist and media designer", "- learned web development @Neue Fische in 2024",
  "- tech stack: html, css, javascript, React, next.js ..."]
 }
 

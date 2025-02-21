@@ -10,9 +10,9 @@ const NavButtonContainer = styled(ButtonContainer)`
   gap: 0.1rem;
 width: 80 %;
 `;
+
 const HeaderContainer = styled(FlexRowWrapper)`
 margin: 0.5rem 0.5rem 0;
-
 `;
 
 const CRLogo = styled.h1` 
@@ -35,6 +35,7 @@ export default function Header({whatIsShown, setWhatIsShown}) {
         <Button activeColor={"darkorange"} isActive={whatIsShown === "about" ? true : false} text="about"  buttonFunction={setWhatIsShown}/>
         <Button activeColor={"darkorange"} isActive={whatIsShown === "me" ? true : false} text="me" buttonFunction={setWhatIsShown} />
       </NavButtonContainer>
+     
     </HeaderContainer>
   );
 }
