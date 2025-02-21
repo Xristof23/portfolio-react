@@ -1,9 +1,11 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 //Buttons
 const ButtonContainer = styled.div`
   display: flex;
   gap: 0.4rem;
+  margin: 0.5rem;
   flex-direction: row;
   min-height: fit-content;
   position: relative; 
@@ -15,49 +17,62 @@ const ButtonContainer = styled.div`
 `;
 
 const StandardButton = styled.button`
+color: black;
 text-align: center;
 font-size: 1.1rem;
 line-height: 1.1rem;
 font-weight: 500; 
-flex-grow: 1;
 margin: .3rem;
 padding: 0.3rem;
-width: ${({ $width }) => $width? `${$width}px` : "5rem"};
+width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
+background-color: ${({ $color }) => $color? $color : "#fcfffc"};
 min-width: fit-content;
 height: 2rem;
-border-radius: 4px;
+border-radius: 6px;
 border: none;
-background-color: #fcfffc;
+ &:hover {
+    background-color:rgb(252, 188, 69);
+    cursor: pointer; 
+  }
 `;
 
 
 //Basic
 const StandardParagraph = styled.p`
-color: #fffffc;
+color: #fcfffc;
 font-size: 1rem;
 width: 88%;
 margin: .4rem;
 padding: .4rem;
-
 `;
+
+const StandardArticle = styled.article`
+    background-color: #222222;
+    border-radius: 8px;
+    padding: 0.25rem;
+    margin: 0.5rem 0.25rem;
+    `;
 
 const Headline1 = styled.h1` 
 color: #fffffc;
 font-size: 1.3rem;
 font-weight: 600; 
-margin: 1.2rem .4rem .4rem;
+margin: .4rem .4rem .4rem;
 padding: .4rem;
 `;
 
-
 const Headline2 = styled.h2`
 color: #fffffc;
-font-size: 1.05rem;
+font-size: 1.2rem;
 font-weight: 600; 
 margin: .4rem;
 padding: .4rem;
 `;
 
+const StandardLink = styled(Link)`
+margin: 0.5rem;
+text-decoration: none;
+`;
 
 //Basic-wrapper
 const FlexRowWrapper = styled.div`
@@ -71,7 +86,6 @@ const FlexColumnWrapper = styled.div`
     flex-direction: column;
     width: 100%;
 `;
-
 
 //Form
 const StandardLabel = styled.label`
@@ -88,7 +102,7 @@ const StyledNrInput = styled.input`
   width: 4rem;
   margin: .4rem;
   padding: .4rem;
-  border-radius: 4px;
+  border-radius: 6px;
 `;
 
 const StyledInput = styled.input`
@@ -99,7 +113,7 @@ const StyledInput = styled.input`
   margin: .2rem 0 .2rem .2rem;
   padding: 0
   border: 1px solid darkorange;
-
+  border-radius: 6px;
 `;
 
 export {
@@ -111,6 +125,8 @@ export {
     StyledInput,
     StyledNrInput,
     StandardLabel,
+    StandardArticle,
     StandardButton,
+    StandardLink,
     StandardParagraph
   }

@@ -1,7 +1,6 @@
 import {
   ButtonContainer,
   FlexRowWrapper,
-  Headline1
 } from "@/sharedStyledComponents";
 import Button from "./Button";
 import styled from "styled-components";
@@ -9,27 +8,30 @@ import styled from "styled-components";
 const NavButtonContainer = styled(ButtonContainer)`
   margin-top: 0.7rem;`;
 
-const CRHeader = styled.h1` 
+const HeaderContainer = styled(FlexRowWrapper)`
+margin-top: 0.5rem;
+`;
+
+const CRLogo = styled.h1` 
   color: darkorange;
-  top: -2rem;
+  top: -1.8rem;
   font-size: 2.5rem;
-  font-weight: 800; 
-  margin: 0rem .4rem .4rem;
+  font-weight: 700; 
+  margin: 0rem 0.8rem .4rem;
   padding: .2rem;
 `;
 
-export default function Header() {
-  
+export default function Header({whatIsShown, setWhatIsShown}) {
+
   return (
-    <FlexRowWrapper>
-      <CRHeader>CR</CRHeader>
+    <HeaderContainer>
+      <CRLogo>CR</CRLogo>
       <NavButtonContainer>
-        <Button text="news"/>
-        <Button text="projects" />
-        <Button text="about" />
-        <Button text="me"/>
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "news" ? true : false} text="news"  buttonFunction={setWhatIsShown} />
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "projects" ? true : false} text="projects" buttonFunction={setWhatIsShown}/>
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "about" ? true : false} text="about"  buttonFunction={setWhatIsShown}/>
+        <Button activeColor={"darkorange"} isActive={whatIsShown === "me" ? true : false} text="me" buttonFunction={setWhatIsShown} />
       </NavButtonContainer>
- 
-    </FlexRowWrapper>
+    </HeaderContainer>
   );
 }

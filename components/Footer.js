@@ -4,15 +4,15 @@ const FooterStyled = styled.footer`
     text-align: center;
     font-size: 1rem;
     font-weight: 400; 
-    color: #fffffc;
+    color: #fcfffc;
     position: absolute; 
-    left: .5rem; 
+
     min-width: 350px;
     max-width: 700px;
-    margin: 2rem .4rem .4rem;
-    padding: .4rem;
+    margin: 1.5rem 1rem .5rem;
+    padding: .25rem;
     border: 1px solid darkorange;
-    border-radius: 4px;
+    border-radius: 6px;
 `;
 
 export default function Footer() {

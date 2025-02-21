@@ -1,16 +1,37 @@
-import { StandardParagraph } from "@/sharedStyledComponents";
+import { StandardArticle, StandardParagraph, StandardLink, Headline2, FlexRowWrapper } from "@/sharedStyledComponents";
 import Button from "./Button";
+import styled from "styled-components";
+
+const ButtonLikeLink = styled(StandardLink)`
+color: black;
+text-align: center;
+font-size: 1.1rem;
+line-height: 1.1rem;
+font-weight: 500; 
+margin: 0.5rem;
+padding: 0.3rem;
+width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
+background-color: ${({ $color }) => $color? $color : "#fcfffc"};
+min-width: fit-content;
+height: 2rem;
+border-radius: 6px;
+ &:hover {
+    background-color:rgb(252, 188, 69);
+    cursor: pointer; 
+  }
+`;
 
 export default function ProjectCard({ project }) {
     const { title, shortDescription, url } = project;
    
     return (
-        <article>
-            <h2>{title}</h2>
-             <StandardParagraph>${shortDescription}</StandardParagraph>
-        <Button text="show details"/>
+        <StandardArticle>
+            <Headline2>{title}</Headline2>
+            <StandardParagraph>{shortDescription}</StandardParagraph>
+            <FlexRowWrapper>
+                {/* <Button text="show details" /> */}
+               {url && <ButtonLikeLink $width={220}  href={url} title="Check this out!" >visit {title} website</ButtonLikeLink>}
+            </FlexRowWrapper>
         
-        
-        {/* <a class="content_link" href=${url} title="Check this out" >visit ${title} website</a> */}
-        </article>)
+        </StandardArticle>)
 } 

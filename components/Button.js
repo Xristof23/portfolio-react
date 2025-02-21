@@ -1,16 +1,15 @@
 import {
-    ButtonContainer,
-    FlexRowWrapper,
     StandardButton,
   } from "@/sharedStyledComponents";
 
 
-export default function Button({text}) {
-    function handleButton() {
-        alert(text);
-    }
+export default function Button({ isActive, activeColor, text, buttonFunction, argument, toggle}) {
+  function handleButton() {
+    const finalArgument = toggle? argument : text;
+    buttonFunction(finalArgument);
+}
     return(
-    <StandardButton onClick={handleButton}>
+      <StandardButton onClick={handleButton} $color={isActive? activeColor : "#fcfffc"}>
    {text}
   </StandardButton>
  )
