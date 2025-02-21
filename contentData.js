@@ -11,14 +11,23 @@ const news250116 = {
   date: "16. 1. 25",
   shortDescription: "A useful tool to control your time to work - or do what you want.",
   description:
-    "Time to work/ do what you want is a little tool to help to control the time you spend working ...",
+    "Time to work/ do what you want is a little tool to help you control the time you spend working ... or doing what you want, what could also be work ;)",
 };
 
-const news250420 = {
+const news250429 = {
   title: "Future Style of the web",
-  date: "25. 4. 25",
+  date: "29. 4. 25",
   shortDescription: "The future is not here yet, but ...",
   description: "Will we have even more pixels tomorrow?",
+};
+
+const news250221 = {
+  title: "Time to work is working",
+  date: "21. 2. 25",
+  shortDescription: "Beware, it is still in alpha state, but might be usable.",
+  description: "Features timing, local storage of your timed tasks, minimal analysis. More features to come. ",
+  projectName: "Time to work",
+  url: "https://time-to-work-silk.vercel.app/"
 };
 
 const whatAFeeling = {
@@ -52,9 +61,9 @@ const squarrelDe = {
   year: 2024
 };
 
-const projectList = [whatAFeeling, squarrel];
+const projectList = [squarrel, whatAFeeling];
 
-const newsList = [news250116, news250115];
+const newsList = [news250221, news250116, news250115];
 
 const aboutContent = { headline: "About this portfolio", paragraphList: ["This project uses React, next.js and styled components.", "No KI was used in the coding of this project."] }
 
@@ -64,7 +73,11 @@ const meContent = {
  "- tech stack: html, css, javascript, React, next.js ..."]
 }
 
-export {aboutContent, meContent, newsList, whatAFeeling, squarrel, squarrelDe, projectList };
+
+const avalanche = { headline: "Avalanche & Landslide", paragraphList: ["What is this? It's me. It's just a name I deemed attractive for all the coding and design I do.", "The name might get its own webside someday.", "You want to know more about me?"], buttonText: "click" }
+
+
+export {aboutContent, avalanche, meContent, newsList, whatAFeeling, squarrel, squarrelDe, projectList };
 
 //Ideas
 

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import ProjectList from "./ProjectList";
-import { aboutContent, meContent, projectList, newsList } from "@/contentData";
+import { aboutContent, avalanche, meContent, projectList, newsList } from "@/contentData";
 import Article from "./Article";
 import Contact from "./Contact";
 
@@ -20,6 +20,7 @@ export default function MainContainer({ whatIsShown }) {
             {whatIsShown === "about" && <Article content={aboutContent} />}
             {whatIsShown === "me" && <Article content={meContent} />}
             {whatIsShown === "me" && <Contact />}
+            {whatIsShown === "avalanche" && <Article content={avalanche} />}
         </StyledMain>
     );
 }

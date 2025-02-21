@@ -6,10 +6,13 @@ import Button from "./Button";
 import styled from "styled-components";
 
 const NavButtonContainer = styled(ButtonContainer)`
-  margin-top: 0.7rem;`;
-
+  margin: 0.7rem 0.25rem 0.5rem 0;
+  gap: 0.1rem;
+width: 80 %;
+`;
 const HeaderContainer = styled(FlexRowWrapper)`
-margin-top: 0.5rem;
+margin: 0.5rem 0.5rem 0;
+
 `;
 
 const CRLogo = styled.h1` 
@@ -17,7 +20,7 @@ const CRLogo = styled.h1`
   top: -1.8rem;
   font-size: 2.5rem;
   font-weight: 700; 
-  margin: 0rem 0.8rem .4rem;
+  margin: 0rem 0.4rem .4rem 0.4rem;
   padding: .2rem;
 `;
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 //Buttons and links
 const ButtonContainer = styled.div`
   display: flex;
-  gap: 0.4rem;
+  gap: 0.25rem;
   margin: 0.5rem;
   flex-direction: row;
   min-height: fit-content;
@@ -24,7 +24,7 @@ line-height: 1.3rem;
 font-weight: 500; 
 margin: .3rem;
 padding: 0.3rem;
-width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
+width: ${({ $width }) => $width ? `${$width}px` : "4rem"};
 background-color: ${({ $color }) => $color? $color : "#fcfffc"};
 min-width: fit-content;
 height: 2rem;

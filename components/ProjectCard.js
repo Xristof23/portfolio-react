@@ -4,7 +4,7 @@ import { useState } from "react";
 import SimpleList from "./SimpleList";
 
 export default function ProjectCard({ project }) {
-    const { date, description, description2, featureList, title, shortDescription, url } = project;
+    const { date, description, description2, featureList, projectName,  title, shortDescription, url } = project;
     const [showDetails, setShowDetails]  = useState(false);
 
     return (
@@ -18,7 +18,7 @@ export default function ProjectCard({ project }) {
             </>}
             <ButtonContainer>
                 <Button activeColor={"darkorange"} isActive={showDetails} text="details"  buttonFunction={setShowDetails} argument={!showDetails} toggle />
-               {url && <ButtonLikeLink $width={230}  href={url} title="Check this out!" >visit {title} website</ButtonLikeLink>}
+               {url && <ButtonLikeLink $width={230}  href={url} title="Check this out!" >visit &quot;{projectName? projectName: title}&quot;</ButtonLikeLink>}
             </ButtonContainer>
         
         </StandardArticle>)
