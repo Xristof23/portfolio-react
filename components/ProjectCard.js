@@ -1,37 +1,25 @@
-import { StandardArticle, StandardParagraph, StandardLink, Headline2, FlexRowWrapper } from "@/sharedStyledComponents";
+import { ButtonContainer, StandardArticle, StandardParagraph, Headline2, FlexRowWrapper, ButtonLikeLink } from "@/sharedStyledComponents";
 import Button from "./Button";
-import styled from "styled-components";
-
-const ButtonLikeLink = styled(StandardLink)`
-color: black;
-text-align: center;
-font-size: 1.1rem;
-line-height: 1.1rem;
-font-weight: 500; 
-margin: 0.5rem;
-padding: 0.3rem;
-width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
-background-color: ${({ $color }) => $color? $color : "#fcfffc"};
-min-width: fit-content;
-height: 2rem;
-border-radius: 6px;
- &:hover {
-    background-color:rgb(252, 188, 69);
-    cursor: pointer; 
-  }
-`;
+import { useState } from "react";
+import SimpleList from "./SimpleList";
 
 export default function ProjectCard({ project }) {
-    const { title, shortDescription, url } = project;
-   
+    const { date, description, description2, featureList, projectName,  title, shortDescription, url } = project;
+    const [showDetails, setShowDetails]  = useState(false);
+
     return (
         <StandardArticle>
-            <Headline2>{title}</Headline2>
+            <Headline2>{date && date} {title}</Headline2>
             <StandardParagraph>{shortDescription}</StandardParagraph>
-            <FlexRowWrapper>
-                {/* <Button text="show details" /> */}
-               {url && <ButtonLikeLink $width={220}  href={url} title="Check this out!" >visit {title} website</ButtonLikeLink>}
-            </FlexRowWrapper>
+            {showDetails && <>
+                <StandardParagraph>{description}</StandardParagraph>
+                {description2 && <StandardParagraph>{description2}</StandardParagraph>}
+                {featureList && <SimpleList array={featureList} />}
+            </>}
+            <ButtonContainer>
+                <Button activeColor={"darkorange"} isActive={showDetails} text="details"  buttonFunction={setShowDetails} argument={!showDetails} toggle />
+               {url && <ButtonLikeLink $width={230}  href={url} title="Check this out!" >visit &quot;{projectName? projectName: title}&quot;</ButtonLikeLink>}
+            </ButtonContainer>
         
         </StandardArticle>)
 } 

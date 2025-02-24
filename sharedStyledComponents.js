@@ -1,10 +1,10 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-//Buttons
+//Buttons and links
 const ButtonContainer = styled.div`
   display: flex;
-  gap: 0.4rem;
+  gap: 0.25rem;
   margin: 0.5rem;
   flex-direction: row;
   min-height: fit-content;
@@ -20,11 +20,11 @@ const StandardButton = styled.button`
 color: black;
 text-align: center;
 font-size: 1.1rem;
-line-height: 1.1rem;
+line-height: 1.3rem;
 font-weight: 500; 
 margin: .3rem;
 padding: 0.3rem;
-width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
+width: ${({ $width }) => $width ? `${$width}px` : "4rem"};
 background-color: ${({ $color }) => $color? $color : "#fcfffc"};
 min-width: fit-content;
 height: 2rem;
@@ -36,6 +36,29 @@ border: none;
   }
 `;
 
+const StandardLink = styled(Link)`
+margin: 0.5rem;
+text-decoration: none;
+`;
+
+const ButtonLikeLink = styled(StandardLink)`
+color: black;
+text-align: center;
+font-size: 1.1rem;
+line-height: 1.3rem;
+font-weight: 500; 
+margin: 0.3rem;
+padding: 0.3rem;
+width: ${({ $width }) => $width ? `${$width}px` : "5rem"};
+background-color: ${({ $color }) => $color? $color : "#fcfffc"};
+min-width: fit-content;
+height: 2rem;
+border-radius: 6px;
+ &:hover {
+    background-color:rgb(252, 188, 69);
+    cursor: pointer; 
+  }
+`;
 
 //Basic
 const StandardParagraph = styled.p`
@@ -69,10 +92,7 @@ margin: .4rem;
 padding: .4rem;
 `;
 
-const StandardLink = styled(Link)`
-margin: 0.5rem;
-text-decoration: none;
-`;
+
 
 //Basic-wrapper
 const FlexRowWrapper = styled.div`
@@ -117,6 +137,7 @@ const StyledInput = styled.input`
 `;
 
 export {
+  ButtonLikeLink,
     ButtonContainer,
     FlexRowWrapper,
     FlexColumnWrapper,

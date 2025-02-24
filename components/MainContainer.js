@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import ProjectList from "./ProjectList";
-import { aboutContent, meContent, projectList, newsList } from "@/contentData";
+import { aboutContent, avalanche, meContent, projectList, newsList } from "@/contentData";
 import Article from "./Article";
 import Contact from "./Contact";
 
@@ -11,15 +11,16 @@ const StyledMain = styled.main`
     padding: 0.25rem;
     `;
 
-export default function MainContainer({ whatIsShown }) {
+export default function MainContainer({ whatIsShown, setWhatIsShown }) {
   
     return (
         <StyledMain>
-            {whatIsShown === "news" && <ProjectList list={newsList} />}
+            {whatIsShown === "news" && <ProjectList newsMode list={newsList} />}
             {whatIsShown === "projects" && <ProjectList list={projectList} />}
             {whatIsShown === "about" && <Article content={aboutContent} />}
             {whatIsShown === "me" && <Article content={meContent} />}
             {whatIsShown === "me" && <Contact />}
+            {whatIsShown === "avalanche" && <Article content={avalanche} setWhatIsShown={setWhatIsShown}/>}
         </StyledMain>
     );
 }
