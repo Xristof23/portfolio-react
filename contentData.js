@@ -11,7 +11,7 @@ const news250116 = {
   date: "16. 1. 25",
   shortDescription: "A useful tool to control your time to work - or do what you want.",
   description:
-    "Time to work/ do what you want is a little tool to help you control the time you spend working ... or doing what you want, what could also be work ;)",
+    '"Time to work" is a little tool to help you control the time you spend working ... or doing what you want, what could also be work ;)',
 };
 
 const news250429 = {
