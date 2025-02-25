@@ -7,13 +7,10 @@ function handleSubmit(event) {
     const contactForm = document.getElementById("contact-form");
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
-    console.log("clicked submit");
-    const today = new Date();
-    
-    const contactData = {
-        today, data
-    };
-    console.log(data);
+    const dateOfContact = new Date();
+
+    const contactData = {name: data.name, email: date.email, dateOfContact};
+    console.log(contactData);
     // event.target.reset();
     // event.target.elements.your-name.focus();
 }
@@ -33,13 +30,13 @@ export default function Contact() {
                 <StandardParagraph>freenoise at gmx dot de</StandardParagraph>
                 <form id="contact-form">
                     <StandardLabel htmlFor="your-name">Your name*</StandardLabel>
-                    <StyledInput id="your-name" name="your-name" type="text" />
+                    <StyledInput id="name" name="name" type="text" required/>
                     <br />
                     <StandardLabel htmlFor="e-mail">E-Mail*</StandardLabel>
-                    <StyledInput id="e-mail" name="e-mail" type="text"/>
+                    <StyledInput id="email" name="email" type="email" required />
                     <br />
                     <StandardLabel htmlFor="your-message">Your message*</StandardLabel>
-                    <StyledInput id="your message" name="your-message" />
+                    <StyledInput id="message" name="message" type="text" required/>
                     <br />
                     <ButtonContainer>
                             <StandardButton onClick={handleSubmit} type="submit">submit</StandardButton>

@@ -29,7 +29,7 @@ z-index: 2;
 export default function Footer({setWhatIsShown}) {
     return (
         <FooterStyled onClick={() => setWhatIsShown("avalanche")}>
-           © 2025 Avalanche & Landslide <VersionNr>(v0.004 alpha)</VersionNr>
+           © 2025 Avalanche & Landslide <VersionNr>(v0.007 alpha)</VersionNr>
         </FooterStyled>
     )
 }
