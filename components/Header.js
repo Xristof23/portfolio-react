@@ -12,7 +12,7 @@ width: 80 %;
 `;
 
 const HeaderContainer = styled(FlexRowWrapper)`
-margin: 0.5rem 0.5rem 0;
+margin: 0.25rem 0.5rem 0 0.5rem;
 `;
 
 const CRLogo = styled.h1` 

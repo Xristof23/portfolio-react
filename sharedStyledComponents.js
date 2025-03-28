@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ButtonContainer = styled.div`
   display: flex;
   gap: 0.25rem;
-  margin: 0.5rem;
+  margin: 1rem 0 0.5rem 0.4rem;
   flex-direction: row;
   min-height: fit-content;
   position: relative; 
@@ -73,7 +73,7 @@ const StandardArticle = styled.article`
     background-color: #222222;
     border-radius: 8px;
     padding: 0.25rem;
-    margin: 0.5rem 0.25rem;
+    margin: 0 0.25rem 0.5rem;
     `;
 
 const Headline1 = styled.h1` 
@@ -113,26 +113,28 @@ color: #fffffc;
  text-align: left;   
  font-size: 0.95rem;
   width: 100%;
-  margin:.4rem;
+  height: 
+  margin:.4rem ;
   padding: .4rem;
+  border-radius: 6px;
 `;
 
 const StyledNrInput = styled.input`
   font-size: 0.8rem;
-  width: 4rem;
+  width: 100%;
   margin: .4rem;
   padding: .4rem;
   border-radius: 6px;
+  
 `;
 
 const StyledInput = styled.input`
   flex-grow: 1;
   min-width: 3rem;
-  width: ${({ $width }) => $width? `${$width}px` : "6rem"};
-  height: 1.8rem;
-  margin: .2rem 0 .2rem .2rem;
-  padding: 0
-  border: 1px solid darkorange;
+  width: calc(100% - 0.6rem);
+  height: 2rem;
+  margin: .3rem;
+  padding: 0;
   border-radius: 6px;
 `;
 
